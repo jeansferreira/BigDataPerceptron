@@ -20,11 +20,11 @@ public class CreatePerceptron {
 		}
 		
 		//create multi layer perceptron
-		MultiLayerPerceptron myMlPerceptron = new MultiLayerPerceptron(TransferFunctionType.TANH, 1, 6, 10, 14, 1);
+		MultiLayerPerceptron myMlPerceptron = new MultiLayerPerceptron(TransferFunctionType.TANH, 1, 6, 10, 20, 1);
 		
 		// learn the training set
 		BackPropagation learningrules = new BackPropagation();
-		learningrules.setMaxError(0.000001);
+		learningrules.setMaxError(0.00001);
 		myMlPerceptron.learn(trainingSet, learningrules);
 		
 		// save trained neural network
